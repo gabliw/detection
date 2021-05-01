@@ -1,6 +1,9 @@
 """
 HShake (https://github.com/gabliw)
 """
+
+import os
+import json
 import utils
 
 """
@@ -12,3 +15,5 @@ todo list
 4. Visualize
 """
 
+if __name__ == "__main__":
+    NotImplemented
