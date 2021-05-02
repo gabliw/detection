@@ -4,7 +4,7 @@ HShake (https://github.com/gabliw)
 
 import os
 import json
-import utils
+import utils, data_loader
 
 """
 Detection
@@ -16,4 +16,5 @@ todo list
 """
 
 if __name__ == "__main__":
+    configuration = data_loader()
     NotImplemented
