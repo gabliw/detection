@@ -6,6 +6,8 @@ Dataset Support
 3. Cityscapes test
 """
 
+import os
+
 
 def data_loader(**kwargs):
     path = kwargs['path']
@@ -22,10 +24,21 @@ def data_loader(**kwargs):
 
 
 def coco_loader():
+    from torch.utils.data import Dataset, DataLoader
     from pycocotools.coco import COCO
 
+    class COCO_Dataset(Dataset):
+        def __init__(self, root_dir='D:\Data\coco', set_name='val2017', split='TRAIN'):
+            super().__init__()
+            self.root_dir = root_dir
+            self.set_name = set_name
+            self.coco = COCO(os.path.join(self.root_dir, 'annotations', 'instances_' + self.set_name + '.json'))
     NotImplemented
 
 
 def pascal_loader():
+    NotImplemented
+
+
+def cityscapes_loader():
     NotImplemented
